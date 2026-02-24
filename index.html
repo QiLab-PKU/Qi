@@ -7,48 +7,81 @@
 
 <style>
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f7f9fc;
-  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
 }
 
 header {
-  background: #0b3d91;
-  color: white;
-  padding: 40px 20px;
+  padding: 70px 20px 40px;
   text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 20px;
+  color: #555;
 }
 
 nav {
-  background: #ffffff;
-  padding: 12px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0 18px;
   text-decoration: none;
   color: #0b3d91;
-  font-weight: bold;
+  font-weight: 500;
 }
 
-section {
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
   max-width: 900px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
   color: #0b3d91;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+ul {
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+.highlight {
+  background: #f5f7fb;
+  padding: 20px;
+  border-left: 4px solid #0b3d91;
+  margin: 30px 0;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: #eee;
-  margin-top: 40px;
+  padding: 40px 20px;
+  border-top: 1px solid #e5e5e5;
+  color: #777;
+  font-size: 14px;
 }
 </style>
 </head>
@@ -57,62 +90,81 @@ footer {
 
 <header>
   <h1>Qi Lab</h1>
-  <p>Signal transduction, Neurodegeneration, Structural biology</p>
+  <p>Structural Biology of Neurodegeneration</p>
 </header>
 
 <nav>
-  <a href="#about">About</a>
   <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
   <a href="#team">Team</a>
   <a href="#join">Join Us</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
+<div class="container">
+
+<section>
   <h2>About</h2>
   <p>
-    Welcome to the Qi Lab. We investigate neurodegenerative diseases using
-    cryo-EM, cryo-ET, and in situ structural biology.
+    The Qi Lab investigates the molecular mechanisms of neurodegenerative
+    diseases using cryo-electron microscopy (cryo-EM) and in situ structural
+    biology. Our research focuses on tau aggregation, MAPT mutations,
+    and protein misfolding processes underlying dementia and Parkinsonism.
   </p>
+
+  <div class="highlight">
+    We are recruiting highly motivated students and postdoctoral fellows.
+  </div>
 </section>
 
 <section id="research">
   <h2>Research</h2>
   <ul>
-    <li>Tau filament structure</li>
-    <li>MAPT mutations</li>
-    <li>Protein aggregation mechanisms</li>
-    <li>In situ structural biology</li>
+    <li>Tau filament structures in human brain tissue</li>
+    <li>MAPT mutations and disease mechanisms</li>
+    <li>Cryo-EM and cryo-ET method development</li>
+    <li>In situ structural biology of amyloid assemblies</li>
+  </ul>
+</section>
+
+<section id="publications">
+  <h2>Selected Publications</h2>
+  <ul>
+    <li>Qi C. et al., Nature (2025)</li>
+    <li>Qi C. et al., Science (2024)</li>
+    <li>Qi C. et al., Cell (2023)</li>
   </ul>
 </section>
 
 <section id="team">
   <h2>Team</h2>
-  <p>
-    Principal Investigator: Dr. Chao Qi
-  </p>
-  <p>
-    We are a multidisciplinary group combining structural biology,
-    neuroscience, and biophysics.
-  </p>
+  <p><strong>Principal Investigator:</strong> Dr. Chao Qi</p>
+  <p>Postdocs and students from diverse backgrounds in structural biology,
+     neuroscience, and biophysics.</p>
 </section>
 
 <section id="join">
   <h2>Join Us</h2>
   <p>
-    We welcome motivated students and postdocs interested in
-    cryo-EM and neurodegenerative diseases.
+    We welcome applications from students and postdoctoral researchers
+    interested in cryo-EM, protein aggregation, and neurodegeneration.
+    Please email your CV and research interests.
   </p>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>Institution: Your University</p>
+  <p>
+    Chao Qi, Ph.D.<br>
+    Your Institution<br>
+    Email: your@email.com
+  </p>
 </section>
 
+</div>
+
 <footer>
-  <p>© 2026 Qi Lab</p>
+  © 2026 Qi Lab
 </footer>
 
 </body>
