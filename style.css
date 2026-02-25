@@ -1,4 +1,4 @@
-/* ===== 全局 ===== */
+/* 全局 */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -29,9 +29,7 @@ header p { font-size: 20px; color: #555; }
   font-weight: 500;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
-}
+.navbar a:hover { text-decoration: underline; }
 
 .container {
   max-width: 1200px;
@@ -56,7 +54,7 @@ footer {
   font-size: 14px;
 }
 
-/* ===== 轮播 600×400 ===== */
+/* 轮播 480x320 */
 .carousel-wrapper {
   position: relative;
   width: 100%;
@@ -66,18 +64,16 @@ footer {
 
 .research-carousel {
   overflow: hidden;
-  height: 350px;
+  height: 320px;
 }
 
 .carousel-track {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   animation: scroll 35s linear infinite;
 }
 
-.carousel-track:hover {
-  animation-play-state: paused;
-}
+.carousel-track:hover { animation-play-state: paused; }
 
 .carousel-item {
   position: relative;
@@ -85,8 +81,8 @@ footer {
 }
 
 .carousel-item img {
-  width: 500px;
-  height: 300px;
+  width: 480px;
+  height: 320px;
   object-fit: cover;
   border-radius: 12px;
   border: 1px solid #ccc;
@@ -94,39 +90,28 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.carousel-item img:hover {
-  transform: scale(1.05);
-}
+.carousel-item img:hover { transform: scale(1.05); }
 
-/* 图片标题说明 */
 .caption {
   position: absolute;
   bottom: 0;
   width: 100%;
   background: rgba(0,0,0,0.5);
   color: white;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 0 0 12px 12px;
   text-align: left;
 }
 
-.caption h3 {
-  margin: 0;
-  font-size: 18px;
-}
+.caption h3 { margin: 0; font-size: 16px; }
+.caption p { margin: 2px 0 0; font-size: 12px; }
 
-.caption p {
-  margin: 2px 0 0;
-  font-size: 14px;
-}
-
-/* 自动滚动动画 */
 @keyframes scroll {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  to { transform: translateX(-50%); }
 }
 
-/* ===== 箭头 ===== */
+/* 箭头 */
 .arrow {
   position: absolute;
   top: 50%;
@@ -134,8 +119,8 @@ footer {
   background: rgba(0,0,0,0.5);
   color: white;
   border: none;
-  padding: 15px 22px;
-  font-size: 36px;
+  padding: 12px 18px;
+  font-size: 28px;
   cursor: pointer;
   border-radius: 5px;
   z-index: 10;
@@ -144,7 +129,7 @@ footer {
 .arrow.left { left: 10px; }
 .arrow.right { right: 10px; }
 
-/* ===== Modal 放大 ===== */
+/* Modal 放大 */
 .modal {
   display: none;
   position: fixed;
@@ -167,16 +152,16 @@ footer {
   transition: transform 0.3s ease;
 }
 
-/* ===== 响应式 ===== */
+/* 响应式 */
 @media screen and (max-width: 1200px) {
-  .carousel-item img { width: 480px; height: 320px; }
-  .research-carousel { height: 320px; }
+  .carousel-item img { width: 400px; height: 260px; }
+  .research-carousel { height: 260px; }
 }
 
 @media screen and (max-width: 768px) {
-  .carousel-item img { width: 360px; height: 240px; }
-  .research-carousel { height: 240px; }
-  .arrow { font-size: 28px; padding: 12px 18px; }
+  .carousel-item img { width: 320px; height: 210px; }
+  .research-carousel { height: 210px; }
+  .arrow { font-size: 24px; padding: 10px 15px; }
 }
 
 @media screen and (max-width: 480px) {
