@@ -47,7 +47,7 @@
   </div>
 
   <!-- 放大弹窗 -->
-  <div id="imgModal" class="modal" onclick="closeModal()">
+  <div id="imgModal" class="modal">
     <img id="modalImg">
   </div>
 
@@ -79,28 +79,27 @@
 </footer>
 
 <script>
-// ===================
-// Modal 放大 & 切换
-// ===================
+// =====================
+// Modal 放大 + 左右切换
+// =====================
 let currentIndex = 0;
 const images = Array.from(document.querySelectorAll('.carousel-track img'));
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
 
 function openModal(img) {
-  const modal = document.getElementById("imgModal");
-  const modalImg = document.getElementById("modalImg");
   modal.style.display = "block";
   modalImg.src = img.src;
   currentIndex = images.indexOf(img);
 }
 
 function closeModal() {
-  document.getElementById("imgModal").style.display = "none";
+  modal.style.display = "none";
 }
 
 function showImage(index) {
-  const modalImg = document.getElementById("modalImg");
-  if(index < 0) index = images.length - 1;
-  if(index >= images.length) index = 0;
+  if (index < 0) index = images.length - 1;
+  if (index >= images.length) index = 0;
   currentIndex = index;
   modalImg.src = images[currentIndex].src;
 }
@@ -108,25 +107,24 @@ function showImage(index) {
 function nextSlide() { showImage(currentIndex + 1); }
 function prevSlide() { showImage(currentIndex - 1); }
 
-// 键盘控制
 document.addEventListener("keydown", function(e) {
   if (e.key === "Escape") closeModal();
   if (e.key === "ArrowRight") nextSlide();
   if (e.key === "ArrowLeft") prevSlide();
 });
 
+modal.addEventListener("click", function(e){
+  if(e.target === modal) closeModal();
+});
+
 // 移动端滑动
 let startX = 0;
-const modal = document.getElementById("imgModal");
-modal.addEventListener("touchstart", function(e){
-  startX = e.touches[0].clientX;
-}, false);
-
+modal.addEventListener("touchstart", function(e){ startX = e.touches[0].clientX; });
 modal.addEventListener("touchend", function(e){
   let endX = e.changedTouches[0].clientX;
   if(endX - startX > 50) prevSlide();
   else if(startX - endX > 50) nextSlide();
-}, false);
+});
 </script>
 
 </body>
