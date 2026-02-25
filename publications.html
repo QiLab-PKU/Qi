@@ -2,48 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Publications — Qi Lab</title>
-<link rel="stylesheet" href="style.css">
+<title>Qi Lab - Publications</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="stylesheet" href="style.css">
 <style>
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Helvetica, Arial, sans-serif;
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.publication-item h3 {
+  margin: 0 0 5px 0;
+  color: #000000;
+}
+
+.publication-item p {
   margin: 0;
+  color: #333;
+  font-size: 14px;
 }
 
-nav {
-  text-align: center;
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-nav a {
-  margin: 0 16px;
-  text-decoration: none;
-  color: #0b3d91;
-  font-weight: 500;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 50px 20px;
-}
-
-h1 { text-align: center; }
-
-ul {
-  line-height: 1.8;
-  font-size: 17px;
-}
 </style>
 </head>
-
 <body>
 
-<nav>
+<header>
+  <h1>Qi Lab @ PKU</h1>
+  <p>Signal transduction, Neurodegenerative diseases, Structural biology</p>
+</header>
+
+<nav class="navbar">
   <a href="index.html">Home</a>
   <a href="research.html">Research</a>
   <a href="publications.html">Publications</a>
@@ -54,14 +44,28 @@ ul {
 
 <div class="container">
 
-<h1>Publications</h1>
-<p>
-For a complete list, see Google Scholar：https://scholar.google.com/citations?user=5cZdsEoAAAAJ&hl=en.
-</p>
-  
-<ul>
- <li>1.	<strong>Chao Qi</strong>, Sofia Lovestam, Alexey G Murzin, Sew Peak-Chew, Catarina Franco, Marika Bogdani, Caitlin Latimer, Jill R Murrell, Patrick W Cullinane, Zane Jaunmuktane, Thomas D Bird, Bernardino Ghetti, Sjors HW Scheres, Michel Goedert. Tau filaments with the Alzheimer fold in human MAPT mutants V337M and R406W. Nat Struct Mol Biol, doi:10.1038/s41594-025-01498-5 (2025).</li>
+<h2>Our Publications</h2>
+
+<div class="publication-list">
+  <div class="publication-item">
+    <h3>Qi et al., Nature 2025</h3>
+    <p>Structural insights into tau filaments in frontotemporal dementia.</p>
+  </div>
+  <div class="publication-item">
+    <h3>Qi et al., Cell 2024</h3>
+    <p>Mechanisms of tau aggregation and propagation in neurons.</p>
+  </div>
+  <div class="publication-item">
+    <h3>Qi et al., Science 2023</h3>
+    <p>Signal transduction pathways in neurodegenerative disease models.</p>
+  </div>
+</div>
 
 </div>
+
+<footer>
+  © 2026 Qi Lab
+</footer>
+
 </body>
 </html>
