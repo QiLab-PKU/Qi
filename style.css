@@ -146,7 +146,7 @@ footer {
   margin: auto;
   max-width: 90%;
   max-height: 85vh;
-  border-radius: 12px;
+  border-radius: 0px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
   transition: transform 0.3s ease;
 }
