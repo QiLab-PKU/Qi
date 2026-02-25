@@ -31,9 +31,17 @@ nav a {
   padding: 50px 20px;
 }
 
-h1 { 
-  text-align: center; 
+h1 {
+  text-align: center;
   margin-bottom: 50px;
+}
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+  color: #333;
 }
 
 .team-grid {
@@ -52,4 +60,70 @@ h1 {
   width: 180px;
   height: 180px;
   object-fit: cover;
-  border-radius: 50
+  border-radius: 50%;
+}
+
+.member h3 {
+  margin: 12px 0 6px;
+}
+
+.member p {
+  color: gray;
+  margin: 0;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="team.html">Team</a>
+  <a href="join.html">Join Us</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+<h1>Our Team</h1>
+
+<!-- ===== PI ===== -->
+<h2 class="section-title">Principal Investigator</h2>
+
+<div class="team-grid">
+
+  <div class="member">
+    <img src="images/team/qi.jpg" alt="Chao Qi">
+    <h3>Chao Qi</h3>
+    <p>Principal Investigator</p>
+  </div>
+
+</div>
+
+<!-- ===== PhD Students ===== -->
+<h2 class="section-title">PhD Students</h2>
+
+<div class="team-grid">
+
+  <div class="member">
+    <img src="images/team/phd1.jpg" alt="PhD Student">
+    <h3>Y. Zhang</h3>
+    <p>PhD Student</p>
+  </div>
+
+  <!-- 可继续添加更多学生 -->
+  <!--
+  <div class="member">
+    <img src="images/team/phd2.jpg" alt="PhD Student">
+    <h3>Name</h3>
+    <p>PhD Student</p>
+  </div>
+  -->
+
+</div>
+
+</div>
+</body>
+</html>
