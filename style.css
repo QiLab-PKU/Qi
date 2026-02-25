@@ -1,22 +1,32 @@
-.me {
-  font-weight: 700;
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
 }
 
-#Teams
 .team-container {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+  justify-content: center;
 }
 
-.card {
-  width: 200px;
+.member {
+  width: 220px;
   text-align: center;
 }
 
-.card img {
+.member img {
   width: 180px;
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.member h3 {
+  margin: 10px 0 5px;
+}
+
+.member p {
+  color: gray;
 }
