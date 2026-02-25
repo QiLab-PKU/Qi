@@ -70,10 +70,8 @@ footer {
 .carousel-track {
   display: flex;
   gap: 20px;
-  animation: scroll 35s linear infinite;
+  transition: transform 0.5s ease;
 }
-
-.carousel-track:hover { animation-play-state: paused; }
 
 .carousel-item {
   position: relative;
@@ -105,11 +103,6 @@ footer {
 
 .caption h3 { margin: 0; font-size: 16px; }
 .caption p { margin: 2px 0 0; font-size: 12px; }
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
 
 /* 箭头 */
 .arrow {
