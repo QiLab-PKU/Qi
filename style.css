@@ -43,9 +43,9 @@ h2 { color: #990000; text-align: center; }
 
 /* 高亮块 */
 .highlight {
-  background: #fff0f0; /* 浅北大红背景 */
+  background: #000000; /* 浅北大红背景 */
   padding: 20px;
-  border-left: 4px solid #990000;
+  border-left: 4px solid #000000;
   margin: 30px 0;
 }
 
@@ -86,7 +86,7 @@ footer {
   height: 320px;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid #990000; /* 北大红边框 */
+  border: 2px solid #000000; 
   cursor: pointer;
   transition: transform 0.3s ease;
 }
