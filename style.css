@@ -112,3 +112,37 @@ body {
 .carousel-track:hover {
   animation-play-state: paused;
 }
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.research-carousel {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* 箭头 */
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none
