@@ -110,20 +110,28 @@ footer {
 
 <h2 style="text-align:center;">Research Highlights</h2>
 
-<div class="research-carousel">
-  <div class="carousel-track">
+<div class="carousel-wrapper">
 
-    <!-- 原始图片 -->
-    <img src="images/home/image1.png" alt="Research 1">
-    <img src="images/home/image2.png" alt="Research 2">
-    <img src="images/home/image3.png" alt="Research 3">
+  <button class="arrow left" onclick="prevSlide()">❮</button>
 
-    <!-- ⭐ 再复制一遍（必须） -->
-    <img src="images/home/image1.png" alt="Research 1">
-    <img src="images/home/image2.png" alt="Research 2">
-    <img src="images/home/image3.png" alt="Research 3">
+  <div class="research-carousel">
+    <div class="carousel-track" id="track">
 
+      <img src="images/home/image1.png" onclick="openModal(this)">
+      <img src="images/home/image2.png" onclick="openModal(this)">
+      <img src="images/home/image3.png" onclick="openModal(this)">
+
+    </div>
   </div>
+
+  <button class="arrow right" onclick="nextSlide()">❯</button>
+
+</div>
+
+<!-- 放大弹窗 -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
 </div>
 
 <section>
