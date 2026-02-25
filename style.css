@@ -13,9 +13,10 @@ header {
   border-bottom: 1px solid #e5e5e5;
 }
 
-header h1 { font-size: 42px; margin-bottom: 10px; color: #990000; }
+header h1 { font-size: 42px; margin-bottom: 10px; color: #000000; }
 header p { font-size: 20px; color: #555; }
 
+/* 导航栏 北大红 */
 .navbar {
   background: #990000; /* 北大红 */
   padding: 15px;
@@ -38,23 +39,23 @@ header p { font-size: 20px; color: #555; }
   padding: 50px 20px;
 }
 
-/* 标题 */
-h2 { color: #990000; text-align: center; }
+/* 标题 黑色 */
+h2 { color: #000000; text-align: center; }
 
-/* 高亮块 */
+/* 高亮块 黑色边框 */
 .highlight {
-  background: #000000; /* 浅北大红背景 */
+  background: #f5f5f5; /* 浅灰背景 */
   padding: 20px;
   border-left: 4px solid #000000;
   margin: 30px 0;
 }
 
-/* 页脚 */
+/* 页脚 黑色 */
 footer {
   text-align: center;
   padding: 40px 20px;
   border-top: 1px solid #e5e5e5;
-  color: #990000;
+  color: #000000;
   font-size: 14px;
 }
 
@@ -81,23 +82,25 @@ footer {
   flex: none;
 }
 
+/* 轮播图片 黑色边框 */
 .carousel-item img {
   width: 480px;
   height: 320px;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid #000000; 
+  border: 2px solid #000000; /* 黑色边框 */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .carousel-item img:hover { transform: scale(1.05); }
 
+/* 轮播标题说明 半透明黑 */
 .caption {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(153,0,0,0.7); /* 半透明北大红 */
+  background: rgba(0,0,0,0.7);
   color: white;
   padding: 6px 10px;
   border-radius: 0 0 12px 12px;
@@ -107,12 +110,12 @@ footer {
 .caption h3 { margin: 0; font-size: 16px; }
 .caption p { margin: 2px 0 0; font-size: 12px; }
 
-/* 箭头 */
+/* 箭头 黑色半透明 */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(153,0,0,0.7);
+  background: rgba(0,0,0,0.7);
   color: white;
   border: none;
   padding: 12px 18px;
