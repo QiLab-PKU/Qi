@@ -115,7 +115,8 @@ body {
 
 .carousel-wrapper {
   position: relative;
-  max-width: 900px;
+  width: 100%;
+  max-width: 1200px;
   margin: 40px auto;
 }
 
