@@ -56,32 +56,32 @@ footer {
   font-size: 14px;
 }
 
-/* ===== 轮播大屏 1.5倍 ===== */
+/* ===== 轮播 600×400 ===== */
 .carousel-wrapper {
   position: relative;
   width: 100%;
-  max-width: 2100px;   /* 放大 1.5倍 */
+  max-width: 1200px;
   margin: 40px auto;
 }
 
 .research-carousel {
   overflow: hidden;
-  height: 480px;       /* 原 320px ×1.5 */
+  height: 400px;
 }
 
 .carousel-track {
   display: flex;
-  gap: 37px;           /* 原 25px ×1.5 */
+  gap: 25px;
   animation: scroll 35s linear infinite;
 }
 
 .carousel-track:hover {
-  animation-play-state: paused;  /* 悬停暂停 */
+  animation-play-state: paused;
 }
 
 .carousel-track img {
-  width: 720px;        /* 原 480px ×1.5 */
-  height: 480px;       /* 原 320px ×1.5 */
+  width: 600px;
+  height: 400px;
   object-fit: cover;
   border-radius: 12px;
   border: 1px solid #ccc;
@@ -93,7 +93,6 @@ footer {
   transform: scale(1.05);
 }
 
-/* 自动滚动动画 */
 @keyframes scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -107,8 +106,8 @@ footer {
   background: rgba(0,0,0,0.5);
   color: white;
   border: none;
-  padding: 18px 27px;   /* 放大箭头 */
-  font-size: 42px;      /* 放大字体 */
+  padding: 15px 22px;
+  font-size: 36px;
   cursor: pointer;
   border-radius: 5px;
   z-index: 10;
@@ -140,20 +139,20 @@ footer {
   transition: transform 0.3s ease;
 }
 
-/* ===== 响应式调整 ===== */
+/* ===== 响应式 ===== */
 @media screen and (max-width: 1200px) {
-  .carousel-track img { width: 600px; height: 360px; }
-  .research-carousel { height: 360px; }
+  .carousel-track img { width: 480px; height: 320px; }
+  .research-carousel { height: 320px; }
 }
 
 @media screen and (max-width: 768px) {
-  .carousel-track img { width: 450px; height: 300px; }
-  .research-carousel { height: 300px; }
-  .arrow { font-size: 32px; padding: 15px 22px; }
+  .carousel-track img { width: 360px; height: 240px; }
+  .research-carousel { height: 240px; }
+  .arrow { font-size: 28px; padding: 12px 18px; }
 }
 
 @media screen and (max-width: 480px) {
-  .carousel-track img { width: 300px; height: 200px; }
-  .research-carousel { height: 220px; }
-  .arrow { font-size: 24px; padding: 10px 15px; }
+  .carousel-track img { width: 240px; height: 160px; }
+  .research-carousel { height: 180px; }
+  .arrow { font-size: 20px; padding: 8px 12px; }
 }
