@@ -1,3 +1,22 @@
 .me {
   font-weight: 700;
 }
+
+#Teams
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.member {
+  width: 200px;
+  text-align: center;
+}
+
+.member img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
