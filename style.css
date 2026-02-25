@@ -56,3 +56,29 @@ body {
 .member p {
   color: gray;
 }
+
+/* ===== 横向滚动图片 ===== */
+.image-scroll {
+  display: flex;
+  overflow-x: auto;      /* 横向滚动 */
+  gap: 20px;
+  padding: 20px 0;
+  scroll-behavior: smooth; /* 滚动平滑 */
+}
+
+.image-scroll img {
+  flex: 0 0 auto;       /* 不缩放图片 */
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  .image-scroll img {
+    width: 120px;
+    height: 120px;
+  }
+}
