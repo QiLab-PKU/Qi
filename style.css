@@ -57,28 +57,42 @@ body {
   color: gray;
 }
 
-/* ===== 横向滚动图片 ===== */
-.image-scroll {
-  display: flex;
-  overflow-x: auto;      /* 横向滚动 */
-  gap: 20px;
+/* ===== 自动滚动科研成果图片 ===== */
+.research-carousel {
+  width: 100%;
+  overflow: hidden;        /* 隐藏滚动条 */
   padding: 20px 0;
-  scroll-behavior: smooth; /* 滚动平滑 */
 }
 
-.image-scroll img {
-  flex: 0 0 auto;       /* 不缩放图片 */
-  width: 180px;
-  height: 180px;
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  animation: scroll 25s linear infinite;
+}
+
+.carousel-track img {
+  width: 300px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #ddd;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-/* 响应式 */
+/* 自动滚动动画 */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* 调整 -50% 根据图片数量 */
+}
+
+/* 鼠标悬停暂停滚动 */
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+/* 响应式手机优化 */
 @media (max-width: 600px) {
-  .image-scroll img {
-    width: 120px;
-    height: 120px;
+  .carousel-track img {
+    width: 200px;
+    height: 140px;
   }
 }
