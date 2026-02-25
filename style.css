@@ -168,20 +168,3 @@ footer {
   .research-carousel { height: 180px; }
   .arrow { font-size: 20px; padding: 8px 12px; }
 }
-
-/* Research 页面图片放大且无边框 */
-.project-item img {
-  width: 400px;      /* 放大尺寸，可根据需要调整 */
-  height: 270px;     /* 保持比例 */
-  object-fit: cover;
-  border: none;      /* 移除边框 */
-  border-radius: 12px;
-}
-
-/* 响应式调整 */
-@media screen and (max-width: 768px) {
-  .project-item img {
-    width: 80%;
-    height: auto;
-  }
-}
