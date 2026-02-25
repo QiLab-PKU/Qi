@@ -87,7 +87,7 @@ footer {
   width: 480px;
   height: 320px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0px;
   border: 2px solid #000000; /* 黑色边框 */
   cursor: pointer;
   transition: transform 0.3s ease;
