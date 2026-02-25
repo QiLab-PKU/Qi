@@ -1,9 +1,21 @@
+/* ===== 全局 ===== */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
 }
 
-/* ===== NAVBAR ===== */
+header {
+  padding: 70px 20px 40px;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+header h1 { font-size: 42px; margin-bottom: 10px; }
+header p { font-size: 20px; color: #555; }
+
 .navbar {
   background: #222;
   padding: 15px;
@@ -21,98 +33,30 @@ body {
   text-decoration: underline;
 }
 
-/* ===== TITLE ===== */
-.page-title {
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h2 { color: #0b3d91; text-align: center; }
+
+.highlight {
+  background: #f5f7fb;
+  padding: 20px;
+  border-left: 4px solid #0b3d91;
+  margin: 30px 0;
+}
+
+footer {
   text-align: center;
-  margin: 40px 0;
+  padding: 40px 20px;
+  border-top: 1px solid #e5e5e5;
+  color: #777;
+  font-size: 14px;
 }
 
-/* ===== TEAM GRID ===== */
-.team-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding-bottom: 60px;
-}
-
-.member {
-  width: 220px;
-  text-align: center;
-}
-
-.member img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #ddd;
-}
-
-.member h3 {
-  margin: 12px 0 6px;
-}
-
-.member p {
-  color: gray;
-}
-
-/* ===== 自动滚动科研成果图片 ===== */
-.research-carousel {
-  width: 100%;
-  overflow: hidden;        /* 隐藏滚动条 */
-  padding: 20px 0;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 30px;
-  animation: scroll 25s linear infinite;
-}
-
-.carousel-track img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* ===== Research Image Auto Carousel ===== */
-
-.research-carousel {
-  width: 100%;
-  overflow: hidden;   /* 隐藏滚动条 */
-  padding: 20px 0;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 30px;
-
-  /* 关键：动画 */
-  animation: scroll 20s linear infinite;
-}
-
-.carousel-track img {
-  width: 500px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* 自动滚动动画 */
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-/* 鼠标悬停暂停 */
-.carousel-track:hover {
-  animation-play-state: paused;
-}
-
+/* ===== 轮播 ===== */
 .carousel-wrapper {
   position: relative;
   width: 100%;
@@ -126,24 +70,71 @@ body {
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease;
+  gap: 20px;
+  animation: scroll 25s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
 }
 
 .carousel-track img {
-  width: 300px;
+  width: 320px;
   height: 200px;
   object-fit: cover;
-  margin-right: 20px;
   border-radius: 10px;
+  border: 1px solid #ccc;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
+}
+
+/* 自动滚动动画 */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* 箭头 */
-
 .arrow {
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
   background: rgba(0,0,0,0.5);
   color: white;
-  border: none
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+/* ===== Modal 放大 ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  padding-top: 80px;
+}
+
+.modal img {
+  display: block;
+  margin: auto;
+  max-width: 85%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
