@@ -31,7 +31,7 @@
 
     <button class="arrow left" onclick="prevSlide()">❮</button>
 
-    <div class="research-carousel">
+    <div class="research-carousel" id="carousel">
       <div class="carousel-track" id="track">
 
         <div class="carousel-item">
@@ -98,9 +98,56 @@
 </footer>
 
 <script>
-// Modal 放大 + 左右切换
-let currentIndex = 0;
+// =====================
+// JS 轮播控制
+// =====================
+const track = document.getElementById('track');
+const carousel = document.getElementById('carousel');
 const items = Array.from(document.querySelectorAll('.carousel-item'));
+const itemWidth = 480 + 20; // 图片宽 + gap
+let currentIndex = 0;
+let autoScroll;
+
+// 自动滚动
+function startAutoScroll() {
+  autoScroll = setInterval(() => {
+    nextSlide();
+  }, 4000);
+}
+
+function stopAutoScroll() {
+  clearInterval(autoScroll);
+}
+
+// 显示当前索引
+function updateSlide() {
+  track.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+}
+
+// 左右切换
+function nextSlide() {
+  currentIndex++;
+  if(currentIndex >= items.length) currentIndex = 0;
+  updateSlide();
+}
+
+function prevSlide() {
+  currentIndex--;
+  if(currentIndex < 0) currentIndex = items.length - 1;
+  updateSlide();
+}
+
+// 悬停暂停
+carousel.addEventListener('mouseenter', stopAutoScroll);
+carousel.addEventListener('mouseleave', startAutoScroll);
+
+// 初始化
+updateSlide();
+startAutoScroll();
+
+// =====================
+// Modal 放大 + 键盘
+// =====================
 const images = items.map(item => item.querySelector('img'));
 const modal = document.getElementById("imgModal");
 const modalImg = document.getElementById("modalImg");
@@ -120,13 +167,10 @@ function showImage(index) {
   modalImg.src = images[currentIndex].src;
 }
 
-function nextSlide() { showImage(currentIndex + 1); }
-function prevSlide() { showImage(currentIndex - 1); }
-
 document.addEventListener("keydown", function(e) {
   if (e.key === "Escape") closeModal();
-  if (e.key === "ArrowRight") nextSlide();
-  if (e.key === "ArrowLeft") prevSlide();
+  if (e.key === "ArrowRight") showImage(currentIndex + 1);
+  if (e.key === "ArrowLeft") showImage(currentIndex - 1);
 });
 
 modal.addEventListener("click", function(e){
@@ -138,8 +182,8 @@ let startX = 0;
 modal.addEventListener("touchstart", function(e){ startX = e.touches[0].clientX; });
 modal.addEventListener("touchend", function(e){
   let endX = e.changedTouches[0].clientX;
-  if(endX - startX > 50) prevSlide();
-  else if(startX - endX > 50) nextSlide();
+  if(endX - startX > 50) showImage(currentIndex - 1);
+  else if(startX - endX > 50) showImage(currentIndex + 1);
 });
 </script>
 
