@@ -66,7 +66,7 @@ footer {
 
 .research-carousel {
   overflow: hidden;
-  height: 400px;
+  height: 300px;
 }
 
 .carousel-track {
@@ -79,9 +79,14 @@ footer {
   animation-play-state: paused;
 }
 
-.carousel-track img {
-  width: 600px;
-  height: 400px;
+.carousel-item {
+  position: relative;
+  flex: none;
+}
+
+.carousel-item img {
+  width: 500px;
+  height: 300px;
   object-fit: cover;
   border-radius: 12px;
   border: 1px solid #ccc;
@@ -89,10 +94,33 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.carousel-track img:hover {
+.carousel-item img:hover {
   transform: scale(1.05);
 }
 
+/* 图片标题说明 */
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 0 0 12px 12px;
+  text-align: left;
+}
+
+.caption h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.caption p {
+  margin: 2px 0 0;
+  font-size: 14px;
+}
+
+/* 自动滚动动画 */
 @keyframes scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -141,18 +169,18 @@ footer {
 
 /* ===== 响应式 ===== */
 @media screen and (max-width: 1200px) {
-  .carousel-track img { width: 480px; height: 320px; }
+  .carousel-item img { width: 480px; height: 320px; }
   .research-carousel { height: 320px; }
 }
 
 @media screen and (max-width: 768px) {
-  .carousel-track img { width: 360px; height: 240px; }
+  .carousel-item img { width: 360px; height: 240px; }
   .research-carousel { height: 240px; }
   .arrow { font-size: 28px; padding: 12px 18px; }
 }
 
 @media screen and (max-width: 480px) {
-  .carousel-track img { width: 240px; height: 160px; }
+  .carousel-item img { width: 240px; height: 160px; }
   .research-carousel { height: 180px; }
   .arrow { font-size: 20px; padding: 8px 12px; }
 }
