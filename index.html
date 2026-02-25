@@ -9,6 +9,11 @@
 
 <body>
 
+<header>
+  <h1>Qi Lab @ PKU</h1>
+  <p>Signal transduction, Neurodegenerative diseases, Structural biology</p>
+</header>
+
 <nav class="navbar">
   <a href="index.html">Home</a>
   <a href="research.html">Research</a>
@@ -17,15 +22,10 @@
   <a href="join.html">Join Us</a>
   <a href="contact.html">Contact</a>
 </nav>
-  
-<header>
-  <h1>Qi Lab @ PKU</h1>
-  <p>Signal transduction, Neurodegenerative diseases, Structural biology</p>
-</header>
-  
+
 <div class="container">
 
-  <h2 class="page-title"></h2>
+  <h2 class="page-title">Research Highlights</h2>
 
   <div class="carousel-wrapper">
 
@@ -98,9 +98,7 @@
 </footer>
 
 <script>
-// =====================
 // Modal 放大 + 左右切换
-// =====================
 let currentIndex = 0;
 const items = Array.from(document.querySelectorAll('.carousel-item'));
 const images = items.map(item => item.querySelector('img'));
@@ -113,9 +111,7 @@ function openModal(img) {
   currentIndex = images.indexOf(img);
 }
 
-function closeModal() {
-  modal.style.display = "none";
-}
+function closeModal() { modal.style.display = "none"; }
 
 function showImage(index) {
   if (index < 0) index = images.length - 1;
