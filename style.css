@@ -78,21 +78,37 @@ body {
   border: 1px solid #ccc;
 }
 
+/* ===== Research Image Auto Carousel ===== */
+
+.research-carousel {
+  width: 100%;
+  overflow: hidden;   /* 隐藏滚动条 */
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+
+  /* 关键：动画 */
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
 /* 自动滚动动画 */
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* 调整 -50% 根据图片数量 */
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
-/* 鼠标悬停暂停滚动 */
+/* 鼠标悬停暂停 */
 .carousel-track:hover {
   animation-play-state: paused;
-}
-
-/* 响应式手机优化 */
-@media (max-width: 600px) {
-  .carousel-track img {
-    width: 200px;
-    height: 140px;
-  }
 }
