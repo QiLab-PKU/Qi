@@ -5,33 +5,73 @@
 <title>Qi Lab - Team</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+
 <style>
-.team-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin: 40px 0;
+
+.section-title{
+  text-align:center;
+  margin-top:50px;
+  margin-bottom:20px;
+  font-size:26px;
 }
 
-.member {
-  width: 220px;
-  text-align: center;
+/* PI layout */
+
+.pi-section{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+  margin:40px 0;
+  flex-wrap:wrap;
 }
 
-.member img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #000000;
+.pi-section img{
+  width:200px;
+  height:200px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid black;
 }
 
-.member h3 { margin: 12px 0 6px; }
-.member p { color: gray; }
+.pi-text{
+  max-width:500px;
+}
+
+/* team grid */
+
+.team-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
+  margin:40px 0;
+}
+
+.member{
+  width:220px;
+  text-align:center;
+}
+
+.member img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid black;
+}
+
+.member h3{
+  margin:12px 0 6px;
+}
+
+.member p{
+  color:gray;
+}
 
 </style>
 </head>
+
 <body>
 
 <nav class="navbar">
@@ -45,30 +85,74 @@
 
 <div class="container">
 
-<h2>Our Team</h2>
+<h2 style="text-align:center;">Our Team</h2>
+
+
+<!-- PI SECTION -->
+
+<h3 class="section-title">Principal Investigator</h3>
+
+<div class="pi-section">
+
+<img src="images/team/chaoqi.jpg" alt="Chao Qi">
+
+<div class="pi-text">
+
+<h3>Chao Qi, Ph.D.</h3>
+
+<p>
+Dr. Chao Qi is a structural biologist studying the molecular basis of
+neurodegenerative diseases. His research focuses on the structure,
+assembly, and propagation of amyloid filaments involved in
+Alzheimer’s disease, frontotemporal dementia, and Parkinson’s disease.
+</p>
+
+<p>
+Using cryo-electron microscopy (cryo-EM) and cryo-electron tomography
+(cryo-ET), the lab aims to uncover disease-specific filament structures
+and translate these discoveries into therapeutic strategies targeting
+pathogenic protein aggregates.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- POSTDOC SECTION -->
+
+<h3 class="section-title">Postdoctoral Researchers</h3>
 
 <div class="team-container">
-  <div class="member">
-    <img src="images/team/chaoqi.jpg" alt="Chao Qi">
-    <h3>Chao Qi, Ph.D.</h3>
-    <p>Principal Investigator</p>
-  </div>
-  <div class="member">
-    <img src="images/team/member1.png" alt="Team Member">
-    <h3>Member 1</h3>
-    <p>Postdoctoral Fellow</p>
-  </div>
-  <div class="member">
-    <img src="images/team/member2.png" alt="Team Member">
-    <h3>Member 2</h3>
-    <p>PhD Student</p>
-  </div>
+
+<div class="member">
+<img src="images/team/member1.png" alt="Postdoc">
+<h3>Member 1</h3>
+<p>Postdoctoral Fellow</p>
 </div>
+
+</div>
+
+
+<!-- PHD SECTION -->
+
+<h3 class="section-title">PhD Students</h3>
+
+<div class="team-container">
+
+<div class="member">
+<img src="images/team/member2.png" alt="PhD Student">
+<h3>Member 2</h3>
+<p>PhD Student</p>
+</div>
+
+</div>
+
 
 </div>
 
 <footer>
-  © 2026 Qi Lab
+© 2026 Qi Lab
 </footer>
 
 </body>
