@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,49 +9,63 @@
 
 <style>
 
+/* ---------- Section Title ---------- */
+
 .section-title{
   text-align:center;
-  margin-top:50px;
-  margin-bottom:20px;
-  font-size:26px;
+  margin-top:60px;
+  margin-bottom:25px;
+  font-size:28px;
+  border-bottom:3px solid #8C1515;
+  display:inline-block;
+  padding-bottom:6px;
 }
 
-/* PI layout */
+/* ---------- PI Layout ---------- */
 
 .pi-section{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:40px;
-  margin:40px 0;
+  gap:50px;
+  margin:40px auto;
   flex-wrap:wrap;
 }
 
 .pi-section img{
-  width:200px;
-  height:200px;
+  width:220px;
+  height:220px;
   object-fit:cover;
   border-radius:50%;
-  border:2px solid black;
+  border:3px solid #000;
 }
 
 .pi-text{
-  max-width:500px;
+  max-width:600px;
 }
 
-/* team grid */
+.pi-text h3{
+  margin-top:0;
+}
 
-.team-container{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+/* ---------- Team Grid ---------- */
+
+.team-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap:40px;
-  margin:40px 0;
+  margin-top:40px;
 }
+
+/* ---------- Member Card ---------- */
 
 .member{
-  width:220px;
   text-align:center;
+  transition: transform 0.3s;
+}
+
+.member:hover{
+  transform: translateY(-5px);
 }
 
 .member img{
@@ -58,7 +73,7 @@
   height:180px;
   object-fit:cover;
   border-radius:50%;
-  border:2px solid black;
+  border:2px solid #000;
 }
 
 .member h3{
@@ -67,9 +82,31 @@
 
 .member p{
   color:gray;
+  margin:0;
+}
+
+/* ---------- Social Icons ---------- */
+
+.icons{
+  margin-top:8px;
+}
+
+.icons a{
+  text-decoration:none;
+  font-size:18px;
+  margin:0 6px;
+}
+
+/* ---------- Alumni ---------- */
+
+.alumni-list{
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -87,10 +124,11 @@
 
 <h2 style="text-align:center;">Our Team</h2>
 
+<!-- ================= PI ================= -->
 
-<!-- PI SECTION -->
-
+<div style="text-align:center;">
 <h3 class="section-title">Principal Investigator</h3>
+</div>
 
 <div class="pi-section">
 
@@ -101,53 +139,89 @@
 <h3>Chao Qi, Ph.D.</h3>
 
 <p>
-Dr. Chao Qi is a structural biologist studying the molecular basis of
-neurodegenerative diseases. His research focuses on the structure,
-assembly, and propagation of amyloid filaments involved in
-Alzheimer’s disease, frontotemporal dementia, and Parkinson’s disease.
+Dr. Chao Qi is a structural biologist investigating the molecular
+mechanisms underlying neurodegenerative diseases. His research focuses
+on the structure, assembly, and propagation of amyloid filaments
+associated with Alzheimer’s disease, frontotemporal dementia,
+and Parkinson’s disease.
 </p>
 
 <p>
 Using cryo-electron microscopy (cryo-EM) and cryo-electron tomography
 (cryo-ET), the lab aims to uncover disease-specific filament structures
-and translate these discoveries into therapeutic strategies targeting
+and translate structural insights into therapeutic strategies targeting
 pathogenic protein aggregates.
 </p>
 
+<div class="icons">
+<a href="#">✉️</a>
+<a href="#">Scholar</a>
+<a href="#">ORCID</a>
 </div>
 
 </div>
 
+</div>
 
-<!-- POSTDOC SECTION -->
+<!-- ================= POSTDOC ================= -->
 
+<div style="text-align:center;">
 <h3 class="section-title">Postdoctoral Researchers</h3>
+</div>
 
-<div class="team-container">
+<div class="team-grid">
 
 <div class="member">
-<img src="images/team/member1.png" alt="Postdoc">
+<img src="images/team/member1.png">
 <h3>Member 1</h3>
 <p>Postdoctoral Fellow</p>
+<div class="icons">
+<a href="#">✉️</a>
+<a href="#">Scholar</a>
+</div>
 </div>
 
 </div>
 
+<!-- ================= PHD ================= -->
 
-<!-- PHD SECTION -->
-
+<div style="text-align:center;">
 <h3 class="section-title">PhD Students</h3>
+</div>
 
-<div class="team-container">
+<div class="team-grid">
 
 <div class="member">
-<img src="images/team/member2.png" alt="PhD Student">
+<img src="images/team/member2.png">
 <h3>Member 2</h3>
+<p>PhD Student</p>
+</div>
+
+<div class="member">
+<img src="images/team/member3.png">
+<h3>Member 3</h3>
 <p>PhD Student</p>
 </div>
 
 </div>
 
+<!-- ================= ALUMNI ================= -->
+
+<div style="text-align:center;">
+<h3 class="section-title">Alumni</h3>
+</div>
+
+<div class="alumni-list">
+
+<p>
+Dr. XXX — Assistant Professor, XXX University
+</p>
+
+<p>
+Dr. XXX — Scientist, XXX Biotech
+</p>
+
+</div>
 
 </div>
 
