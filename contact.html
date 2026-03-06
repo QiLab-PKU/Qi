@@ -5,18 +5,54 @@
 <title>Qi Lab - Contact</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+
 <style>
-.contact-info {
-  margin: 40px 0;
+
+.contact-wrapper{
+  display:flex;
+  gap:50px;
+  align-items:flex-start;
+  margin-top:40px;
 }
 
-.contact-info p {
-  color: #333;
-  line-height: 1.6;
-  margin: 10px 0;
+/* left side */
+.contact-info{
+  flex:1;
 }
+
+.contact-info p{
+  color:#333;
+  line-height:1.7;
+  margin:10px 0;
+  font-size:16px;
+}
+
+/* map */
+.map-container{
+  flex:1.5;
+}
+
+.map-container iframe{
+  width:100%;
+  height:420px;
+  border:0;
+  border-radius:6px;
+}
+
+/* mobile */
+@media (max-width:800px){
+  .contact-wrapper{
+    flex-direction:column;
+  }
+
+  .map-container iframe{
+    height:350px;
+  }
+}
+
 </style>
 </head>
+
 <body>
 
 <nav class="navbar">
@@ -32,29 +68,50 @@
 
 <h2>Contact</h2>
 
-<div class="contact-info">
-  <p><strong>Chao Qi, Ph.D.</strong></p>
-  <p>Department of Biophysics, School of Basic Medical Sciences, Peking University</p>
-  <p>Email: <a href="mailto:chaoqi@bjmu.edu.cn">chaoqi@bjmu.edu.cn</a></p>
-  <p>Address: Xueyuan Road 38, Central Research Building, Health Science Center, Peking University, Beijing, China</p>
-</div>
+<div class="contact-wrapper">
 
-<h2>Our Location</h2>
+<div class="contact-info">
+
+<p><strong>Chao Qi, Ph.D.</strong></p>
+
+<p>
+Department of Biophysics<br>
+School of Basic Medical Sciences<br>
+Peking University
+</p>
+
+<p>
+Email: 
+<a href="mailto:chaoqi@bjmu.edu.cn">
+chaoqi@bjmu.edu.cn
+</a>
+</p>
+
+<p>
+Address:<br>
+Central Research Building<br>
+Peking University Health Science Center<br>
+38 Xueyuan Road<br>
+Beijing 100191, China
+</p>
+
+</div>
 
 <div class="map-container">
+
 <iframe
-  src="https://www.google.com/maps/place/北京大学医学部（西门）/@39.9840881,116.3543817,17.07z/data=!4m14!1m7!3m6!1s0x35f054706702c7e5:0x6c5f2d2293632ea8!2z5YyX5Lqs5aSn5a2m5Yy75a2m6YOo!8m2!3d39.9845922!4d116.3525989!16zL20vMDd2Zmw3!3m5!1s0x35f05473dc432a25:0xda82b15dae4d1bd7!8m2!3d39.984259!4d116.355598!16s%2Fg%2F1tf7vwym?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D“
-  width="100%"
-  height="400"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy">
+src="https://www.google.com/maps?q=Peking+University+Health+Science+Center&output=embed"
+loading="lazy">
 </iframe>
+
 </div>
+
+</div>
+
 </div>
 
 <footer>
-  © 2026 Qi Lab
+© 2026 Qi Lab
 </footer>
 
 </body>
