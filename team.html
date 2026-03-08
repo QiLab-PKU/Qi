@@ -1,8 +1,205 @@
-<!-- ================= PHD ================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<div style="text-align:center;">
-<h3 class="section-title">PhD Students</h3>
+<head>
+<meta charset="UTF-8">
+<title>Qi Lab - Team</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ---------- Section Title ---------- */
+
+.section-title{
+  text-align:center;
+  font-size:30px;
+  margin:70px 0 20px;
+  position:relative;
+}
+
+.section-title::after{
+  content:"";
+  width:80px;
+  height:3px;
+  background:#8C1515;
+  display:block;
+  margin:10px auto 0;
+}
+
+/* ---------- PI Layout ---------- */
+
+.pi-section{
+  display:flex;
+  gap:60px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:50px auto;
+}
+
+.pi-section img{
+  width:420px;
+  height:420px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.pi-text{
+  max-width:650px;
+  line-height:1.7;
+}
+
+.pi-text h3{
+  margin-top:0;
+}
+
+/* ---------- Team Grid ---------- */
+
+.team-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:45px;
+  margin:50px 0;
+}
+
+/* ---------- Member Card ---------- */
+
+.member{
+  text-align:center;
+  padding:10px;
+  transition: all 0.25s ease;
+}
+
+.member:hover{
+  transform:translateY(-6px);
+}
+
+.member img{
+  width:270px;
+  height:270px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.member h3{
+  margin:12px 0 5px;
+  font-size:20px;
+}
+
+.member p{
+  margin:0;
+  color:#666;
+  line-height:1.6;
+}
+
+/* ---------- Email ---------- */
+
+.email{
+  margin-top:8px;
+  font-size:15px;
+}
+
+.email a{
+  color:#8C1515;
+  text-decoration:none;
+}
+
+.email a:hover{
+  text-decoration:underline;
+}
+
+/* ---------- Alumni ---------- */
+
+.alumni{
+  max-width:800px;
+  margin:auto;
+  line-height:1.8;
+  text-align:center;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="team.html">Team</a>
+<a href="join.html">Join Us</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+
+<div class="container">
+
+<h2 style="text-align:center;">Our Team</h2>
+
+<!-- ================= PI ================= -->
+
+<h3 class="section-title">Principal Investigator</h3>
+
+<div class="pi-section">
+
+<img src="images/team/chaoqi.jpg">
+
+<div class="pi-text">
+
+<h3><strong>Chao Qi (亓超)</strong></h3>
+
+<p>
+Assistant Professor, Department of Biophysics, School of Basic Medical Sciences, Peking University.
+</p>
+
+<p>
+Chao Qi studied Biomedicine at Jilin University. He then joined the group of
+<a href="https://www.ibp.cas.cn/kytd/yszj/202509/t20250919_7971712.html" target="_blank">
+Da-Cheng Wang
+</a>
+at the Institute of Biophysics, Chinese Academy of Sciences, where he received training in macromolecular crystallography.
+</p>
+
+<p>
+He obtained his PhD in the group of
+<a href="https://www.psi.ch/en/lbr/people/volodymyr-korkhov" target="_blank">
+Volodymyr Korkhov
+</a>
+at ETH Zurich and the Paul Scherrer Institute.
+</p>
+
+<p>
+In 2022 he joined the groups of
+<a href="https://mrclmb.ac.uk/research-leaders/sjors-scheres/" target="_blank">
+Sjors Scheres
+</a>
+and
+<a href="https://mrclmb.ac.uk/research-leaders/michel-goedert/" target="_blank">
+Michel Goedert
+</a>
+at the MRC Laboratory of Molecular Biology.
+</p>
+
+<p>
+In 2025 he established the Qi Lab at Peking University. His research focuses on molecular mechanisms of neurodegenerative diseases using cryo-EM and cryo-ET.
+</p>
+
+<div class="email">
+✉️ <a href="mailto:chaoqi@bjmu.edu.cn">chaoqi@bjmu.edu.cn</a>
 </div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================= PhD ================= -->
+
+<h3 class="section-title">PhD Students</h3>
 
 <div class="team-grid">
 
@@ -10,47 +207,69 @@
 <img src="images/team/member2.png">
 <h3>Kexin Ling (凌可欣)</h3>
 <p>PhD Student</p>
-<p>Kexin studied life sciences at Wuhan University, and then obtained her Master's degree from Imperial College London. She joined our group in 2024 as a PhD student.</p>
+<p>Kexin studied life sciences at Wuhan University and obtained her Master's degree from Imperial College London. She joined the lab in 2024.</p>
 </div>
 
 <div class="member">
 <img src="images/team/member3.png">
 <h3>Zepeng Yin (尹泽芃)</h3>
 <p>PhD Student</p>
-<p>Zepeng is in the Peking University Basic Medical Sciences eight-year PhD program. He is keen to uncover the molecular mechanism underlying neurodegenerative diseases.</p>
+<p>Zepeng is in the Peking University eight-year MD-PhD program and is interested in molecular mechanisms of neurodegenerative diseases.</p>
 </div>
 
 <div class="member">
 <img src="images/team/member4.png">
 <h3>Yi Ren (任毅)</h3>
 <p>PhD Student</p>
-<p>Yi will graduate from Huazhong University of Science and Technology in 2026. He is skilled in mathematics and will develop in situ cryo-electron tomography methods for cells and tissues.</p>
+<p>Yi will graduate from Huazhong University of Science and Technology in 2026 and will develop in situ cryo-electron tomography methods.</p>
 </div>
 
-</div>  <!-- 这里必须关闭 PhD 的 grid -->
-
-
-
-<!-- ================= Bachelor ================= -->
-
-<div style="text-align:center;">
-<h3 class="section-title">Bachelor Students</h3>
 </div>
+
+
+
+<!-- ================= Undergraduate ================= -->
+
+<h3 class="section-title">Undergraduate Students</h3>
 
 <div class="team-grid">
 
 <div class="member">
 <img src="images/team/member5.png">
 <h3>Xiangyu Jiao (焦翔宇)</h3>
-<p>Bachelor Student</p>
-<p>Xiangyu is in his third year of the Peking University Basic Medical Sciences eight-year PhD program.</p>
+<p>Undergraduate Student</p>
+<p>Xiangyu is a third-year student in the Peking University eight-year MD-PhD program.</p>
 </div>
 
 <div class="member">
 <img src="images/team/zhidong.png">
 <h3>Zhidong Lei (雷智栋)</h3>
-<p>Bachelor Student</p>
-<p>Zhidong is in his fourth year of the Peking University Basic Medical Sciences eight-year PhD program.</p>
+<p>Undergraduate Student</p>
+<p>Zhidong is a fourth-year student in the Peking University eight-year MD-PhD program.</p>
 </div>
 
-</div>  <!-- Bachelor grid 结束 -->
+</div>
+
+
+
+<!-- ================= Alumni ================= -->
+
+<h3 class="section-title">Alumni</h3>
+
+<div class="alumni">
+
+<p>
+The Qi Lab welcomes students and researchers interested in structural biology and neurodegenerative diseases.
+</p>
+
+</div>
+
+</div>
+
+
+<footer>
+© 2026 Qi Lab
+</footer>
+
+</body>
+</html>
