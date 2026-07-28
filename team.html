@@ -63,6 +63,23 @@
   margin:50px 0;
 }
 
+.staff-sections{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:45px;
+  align-items:start;
+}
+
+.staff-section .section-title{
+  font-size:26px;
+}
+
+@media screen and (max-width:768px){
+  .staff-sections{
+    grid-template-columns:1fr;
+  }
+}
+
 /* ---------- Member Card ---------- */
 
 .member{
@@ -80,20 +97,6 @@
   height:270px;
   object-fit:cover;
   border-radius:8px;
-}
-
-.member-placeholder{
-  width:270px;
-  height:270px;
-  border-radius:8px;
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#f1eeee;
-  color:#8C1515;
-  font-size:42px;
-  font-weight:bold;
 }
 
 .member h3{
@@ -184,7 +187,11 @@ Assistant Professor, Peking University.
 </div>
 
 
-<!-- ================= Postdoctoral Fellows ================= -->
+<!-- ================= Postdoctoral Fellows and Research Assistants ================= -->
+
+<div class="staff-sections">
+
+<section class="staff-section">
 
 <h3 class="section-title">Postdoctoral Fellows</h3>
 
@@ -199,9 +206,10 @@ Assistant Professor, Peking University.
 
 </div>
 
+</section>
 
-<!-- ================= Research Assistants ================= -->
 
+<section class="staff-section">
 <h3 class="section-title">Research Assistants</h3>
 
 <div class="team-grid">
@@ -212,6 +220,10 @@ Assistant Professor, Peking University.
 <p>Research Assistant</p>
 <p>Shuqing received her Bachelor's degree from Hebei University of Science and Technology.</p>
 </div>
+
+</div>
+
+</section>
 
 </div>
 
@@ -252,7 +264,7 @@ Assistant Professor, Peking University.
 </div>
 
 <div class="member">
-<div class="member-placeholder" role="img" aria-label="Ang Li">AL</div>
+<img src="images/team/angli.svg" alt="Ang Li">
 <h3>Ang Li (李昂)</h3>
 <p>PhD Student</p>
 <p>Ang graduated from Shanghai Jiao Tong University and conducts doctoral research in protein design.</p>
