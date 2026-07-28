@@ -74,9 +74,35 @@
   font-size:26px;
 }
 
+.phd-grid{
+  grid-template-columns:repeat(6, minmax(0,1fr));
+}
+
+.phd-grid .member{
+  grid-column:span 2;
+}
+
+.phd-grid .member:nth-last-child(2){
+  grid-column:2 / span 2;
+}
+
+.phd-grid .member:last-child{
+  grid-column:4 / span 2;
+}
+
 @media screen and (max-width:768px){
   .staff-sections{
     grid-template-columns:1fr;
+  }
+
+  .phd-grid{
+    grid-template-columns:1fr;
+  }
+
+  .phd-grid .member,
+  .phd-grid .member:nth-last-child(2),
+  .phd-grid .member:last-child{
+    grid-column:auto;
   }
 }
 
@@ -233,7 +259,7 @@ Assistant Professor, Peking University.
 
 <h3 class="section-title">PhD Students</h3>
 
-<div class="team-grid">
+<div class="team-grid phd-grid">
 
 <div class="member">
 <img src="images/team/kexinling.jpg">
